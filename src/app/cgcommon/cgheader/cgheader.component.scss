@@ -41,6 +41,61 @@
                     transition-duration: .3s;
                     transition-property: transform;
 
+                    :before {
+                        position: absolute;
+                        pointer-events: none;
+                        z-index: -1;
+                        content: '';
+                        top: 100%;
+                        left: 5%;
+                        height: 10px;
+                        width: 90%;
+                        opacity: 0;
+                        background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+                        background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+                        transition-duration: 0.3s;
+                        transition-property: transform, opacity;
+                    }
+
+                    &.active {
+                        font-family: 'Poppins-Medium', sans-serif;
+                    }
+
+                    &.active, &:hover, &:focus {
+                        text-decoration: none;
+                        color: #ffffff;
+                        background-color: transparent;
+    
+                        span {
+                            
+                            img.home {
+                                content: url('../../../assets/icons/homesel.png');
+                            }
+    
+                            img.game {
+                                content: url('../../../assets/icons/gamesel.png');
+                            }
+    
+                            img.instruction {
+                                content: url('../../../assets/icons/instructionsel.png');
+                            }
+    
+                            img.about {
+                                content: url('../../../assets/icons/aboutsel.png');
+                            }
+                        }
+                    } 
+
+                    &.active, &:hover, &:active, &:focus {
+                        transform: translateY(-5px);
+
+                        :before {
+                            opacity: 1;
+                            transform: translateY(-5px);
+                        }
+    
+                    }
+
                     span {
                         margin-right: 5px;
 
@@ -51,59 +106,66 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
-                a.active, a:hover, a:focus {
-                    text-decoration: none;
-                    color: #ffffff;
-                    background-color: transparent;
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    .cgnavbar {
 
-                    span {
-                        
-                        img.home {
-                            content: url('../../../assets/icons/homesel.png');
-                        }
+        &__header {
+            width: 100%;
 
-                        img.game {
-                            content: url('../../../assets/icons/gamesel.png');
-                        }
+            a {
+                display: block;
+                margin: 0 auto;
+                width: 40%;
 
-                        img.instruction {
-                            content: url('../../../assets/icons/instructionsel.png');
-                        }
-
-                        img.about {
-                            content: url('../../../assets/icons/aboutsel.png');
-                        }
-                    }
-
-                }
-
-                a.active, a:hover, a:active, a:focus {
-                    transform: translateY(-5px);
-
-                }
-
-                a.active, a:hover:before, a:active:before, a:focus:before {
-                    opacity: 1;
-                    transform: translateY(-5px);
-                }
-                
-                a.active:before, a:before {
-                    position: absolute;
-                    pointer-events: none;
-                    z-index: -1;
-                    content: '';
-                    top: 100%;
-                    left: 5%;
-                    height: 10px;
-                    width: 90%;
-                    opacity: 0;
-                    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-                    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
-                    transition-duration: 0.3s;
-                    transition-property: transform, opacity;
+                img {
+                    width: 100%;
                 }
             }
+        }
+
+        &__links {
+            margin: 0 auto;
+
+            ul {
+                li {
+                    a {
+                        padding: 15px 27px;
+
+                        span {
+                            margin: 0;
+
+                            &.link-text {
+                                display: none;
+                            }
+
+                            img {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Small & Medium devices (landscape phones, 576px and up to 996px)
+@media (min-width: 576px) and (max-width: 996px) {
+    .cgnavbar {
+
+        &__header {
+            margin: 0 auto;
+        }
+
+        &__links {
+            margin: 0 auto;
         }
     }
 }

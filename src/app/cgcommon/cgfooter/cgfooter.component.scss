@@ -10,3 +10,22 @@ footer {
         margin: 0;
     }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+    footer {
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+// Small & Medium devices (landscape phones, 576px and up to 996px)
+@media (min-width: 576px) and (max-width: 996px) {
+    footer {
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

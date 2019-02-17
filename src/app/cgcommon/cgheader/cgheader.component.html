@@ -10,22 +10,26 @@
       <ul class="nav navbar-nav ">
         <li>
           <a [ngClass]="{'active': selectedLink === 'home'}" (click)="linkClick('home')" routerLink="">
-            <span><img class="home" src="../../../assets/icons/home.png"/></span>Home
+            <span><img class="home" src="../../../assets/icons/home.png"/></span>
+            <span class="link-text">Home</span>
           </a>
         </li>
         <li>
           <a [ngClass]="{'active': selectedLink === 'game'}" (click)="linkClick('game')" routerLink="">
-            <span><img class="game" src="../../../assets/icons/game.png"/></span>Game
+            <span><img class="game" src="../../../assets/icons/game.png"/></span>
+            <span class="link-text">Game</span>
           </a>
         </li>
         <li>
           <a [ngClass]="{'active': selectedLink === 'instruction'}" (click)="linkClick('instruction')" routerLink="">
-            <span><img class="instruction" src="../../../assets/icons/instruction.png"/></span>Instructions
+            <span><img class="instruction" src="../../../assets/icons/instruction.png"/></span>
+            <span class="link-text">Instructions</span>
           </a>
         </li>
         <li>
           <a [ngClass]="{'active': selectedLink === 'about'}" (click)="linkClick('about')" routerLink="">
-            <span><img class="about" src="../../../assets/icons/about.png"/></span>About Us
+            <span><img class="about" src="../../../assets/icons/about.png"/></span>
+            <span class="link-text">About Us</span>
           </a>
         </li>
       </ul>
