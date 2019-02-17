@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CgheaderComponent } from './cgcommon/cgheader/cgheader.component';
 import { CgfooterComponent } from './cgcommon/cgfooter/cgfooter.component';
+import { CghomeComponent } from './cgpages/cghome/cghome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CgheaderComponent,
-    CgfooterComponent
+    CgfooterComponent,
+    CghomeComponent
   ],
   imports: [
     BrowserModule,
