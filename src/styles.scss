@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+//Adding Fonts
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('./assets/fonts/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('./assets/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Poppins-Bold';
+src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: -webkit-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+    background-image: -webkit-radial-gradient(top, circle cover, #3c3b52 0%, #252233 80%);
+    background-image: radial-gradient(circle at top, #3c3b52 0%, #252233 80%);
+    display: table;
+    font-size: 16px;
+    width: 100%;
+    color: #969696;
+    font-family: 'Poppins', sans-serif;
+}

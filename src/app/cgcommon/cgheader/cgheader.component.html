@@ -1,3 +1,34 @@
-<p>
-  cgheader works!
-</p>
+<nav class="navbar cgnavbar">
+  <div class="container">
+    <!-- Brand Logo -->
+    <div class="navbar-header cgnavbar__header">
+      <a class="navbar-brand" routerLink=""><img src="../../../assets/img/logo.png" alt="Logo"></a>
+    </div>
+
+    <!--  -->
+    <div class="cgnavbar__links">
+      <ul class="nav navbar-nav ">
+        <li>
+          <a [ngClass]="{'active': selectedLink === 'home'}" (click)="linkClick('home')" routerLink="">
+            <span><img class="home" src="../../../assets/icons/home.png"/></span>Home
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': selectedLink === 'game'}" (click)="linkClick('game')" routerLink="">
+            <span><img class="game" src="../../../assets/icons/game.png"/></span>Game
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': selectedLink === 'instruction'}" (click)="linkClick('instruction')" routerLink="">
+            <span><img class="instruction" src="../../../assets/icons/instruction.png"/></span>Instructions
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'active': selectedLink === 'about'}" (click)="linkClick('about')" routerLink="">
+            <span><img class="about" src="../../../assets/icons/about.png"/></span>About Us
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

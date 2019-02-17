@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cgheader.component.scss']
 })
 export class CgheaderComponent implements OnInit {
+  selectedLink: string = 'home';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  linkClick(newValue: string): void {
+    this.selectedLink = newValue;
+  }
 }

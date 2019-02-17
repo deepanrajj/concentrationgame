@@ -1,0 +1,109 @@
+// Header Styles
+
+.cgnavbar {    
+    box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.25);
+    padding: 0 10px;
+
+    // Brand Logo
+    &__header {
+
+        a {
+            cursor: pointer;
+
+            img {
+                width: 200px;
+                height: 60px;
+            }
+
+            img:hover {
+                content: url('../../../assets/img/logo-hover.png');
+            }
+        }
+    }
+
+    //Links(Home, Game, ...)
+    &__links {
+        ul {
+            flex-direction: row;
+
+            li {
+
+                a {
+                    color: #969696;
+                    line-height: 40px;
+                    position: relative;
+                    padding: 15px;
+                    transition: .5s color ease-in-out;
+                    display: inline-block;
+                    vertical-align: middle;
+                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                    transform: translateZ(0);
+                    transition-duration: .3s;
+                    transition-property: transform;
+
+                    span {
+                        margin-right: 5px;
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            margin-top: -5px;
+                        }
+                    }
+                }
+
+                a.active, a:hover, a:focus {
+                    text-decoration: none;
+                    color: #ffffff;
+                    background-color: transparent;
+
+                    span {
+                        
+                        img.home {
+                            content: url('../../../assets/icons/homesel.png');
+                        }
+
+                        img.game {
+                            content: url('../../../assets/icons/gamesel.png');
+                        }
+
+                        img.instruction {
+                            content: url('../../../assets/icons/instructionsel.png');
+                        }
+
+                        img.about {
+                            content: url('../../../assets/icons/aboutsel.png');
+                        }
+                    }
+
+                }
+
+                a.active, a:hover, a:active, a:focus {
+                    transform: translateY(-5px);
+
+                }
+
+                a.active, a:hover:before, a:active:before, a:focus:before {
+                    opacity: 1;
+                    transform: translateY(-5px);
+                }
+                
+                a.active:before, a:before {
+                    position: absolute;
+                    pointer-events: none;
+                    z-index: -1;
+                    content: '';
+                    top: 100%;
+                    left: 5%;
+                    height: 10px;
+                    width: 90%;
+                    opacity: 0;
+                    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+                    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+                    transition-duration: 0.3s;
+                    transition-property: transform, opacity;
+                }
+            }
+        }
+    }
+}
