@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CgheaderComponent } from './cgcommon/cgheader/cgheader.component';
 import { CgfooterComponent } from './cgcommon/cgfooter/cgfooter.component';
 import { CghomeComponent } from './cgpages/cghome/cghome.component';
+import { CggameComponent } from './cgpages/cggame/cggame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CgheaderComponent,
     CgfooterComponent,
-    CghomeComponent
+    CghomeComponent,
+    CggameComponent
   ],
   imports: [
     BrowserModule,
