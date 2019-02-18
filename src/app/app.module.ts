@@ -7,6 +7,7 @@ import { CgheaderComponent } from './cgcommon/cgheader/cgheader.component';
 import { CgfooterComponent } from './cgcommon/cgfooter/cgfooter.component';
 import { CghomeComponent } from './cgpages/cghome/cghome.component';
 import { CggameComponent } from './cgpages/cggame/cggame.component';
+import { CginstructionsComponent } from './cgpages/cginstructions/cginstructions.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CggameComponent } from './cgpages/cggame/cggame.component';
     CgheaderComponent,
     CgfooterComponent,
     CghomeComponent,
-    CggameComponent
+    CggameComponent,
+    CginstructionsComponent
   ],
   imports: [
     BrowserModule,
